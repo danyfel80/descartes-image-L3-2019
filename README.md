@@ -5,7 +5,7 @@ Ce repository est créé avec l'objectif d'aider aux étudiants à créer leur p
 
 Le code sera documenté en anglais mais les tutoriaux seront présentés en français.
 
-Les slides présentés pendant les séance de TD sont disponibles sur [Google Drive](https://docs.google.com/presentation/d/1JLikgV6NzoS8rhQHqTeED8CARfK9NMhFIF7WDRgZUkQ/edit?usp=sharing). 
+Les slides présentés pendant les séance de TD sont disponibles sur [Google Drive](https://drive.google.com/open?id=1Cxq6gtcy8JJMaXIwhkoOsWbDlPxjdZJY). 
 
 Comme reference, la documentation du code d'ImageJ et d'ImgLib2 sont disponibles sur [http://javadoc.scijava.org/](http://javadoc.scijava.org/)
 
