@@ -3,17 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>fr.parisdescartes</groupId>
-		<artifactId>licence3.image</artifactId>
-		<version>0.0.1</version>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>16.1.0</version>
+		<relativePath />
 	</parent>
 
-	<artifactId>launchImageJ</artifactId>
-<!-- 	<groupId>fr.parisdescartes</groupId> -->
-<!-- 	<version>0.0.1</version> -->
-
-	<name>Launch ImageJ</name>
-	<description>A Main class that launches ImageJ</description>
+	<groupId>fr.parisdescartes</groupId>
+	<artifactId>histogram</artifactId>
+	<version>0.0.1</version>
+	<name>Histogram workshop</name>
+	<description>Plugins for computing image histograms and performing transformations related to the histogram of an image</description>
+	
 	<url>https://github.com/[MY-ORG]/[MY-REPO]</url>
 	<inceptionYear>2018</inceptionYear>
 	<organization>
@@ -90,30 +91,9 @@
 			<groupId>net.imagej</groupId>
 			<artifactId>imagej</artifactId>
 		</dependency>
-		<!-- NB: For ImageJ 1.x support. -->
 		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>ij</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>imagej-legacy</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>fr.parisdescartes</groupId>
-			<artifactId>gradient</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.parisdescartes</groupId>
-			<artifactId>drawLines</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.parisdescartes</groupId>
-			<artifactId>histogram</artifactId>
-			<version>0.0.1</version>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-algorithm-gpl</artifactId>
 		</dependency>
 	</dependencies>
 </project>

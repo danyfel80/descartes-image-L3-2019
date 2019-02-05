@@ -84,6 +84,7 @@
 		<module>launchImageJ</module>
 		<module>drawLines</module>
 		<module>gradient</module>
+		<module>histogram</module>
 	</modules>
 
 	<repositories>
