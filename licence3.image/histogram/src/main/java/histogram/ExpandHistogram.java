@@ -52,7 +52,7 @@ public class ExpandHistogram<T extends RealType<T>> implements Command {
 		double intensity = imagePixel.getRealDouble();
 		double range = maxIntensity - minIntensity;
 		double targetRange = maxLimitIntensity - minLimitIntensity;
-		double newIntensity = ((intensity - minIntensity) * targetRange / range) + minLimitIntensity;
+		double newIntensity = 0d; // Changez cette ligne par le calcul de l'expansion.
 		return newIntensity;
 	}
 
