@@ -46,7 +46,18 @@ public class ComputeHistogram<T extends RealType<T>> implements Command {
 
 		Histogram1d<T> histogram = ops.image().histogram(image, histogramBins);
 		long maxBinValue = getMaxBinValue(histogram);
-		// Completez l'image histogramImage
+		int binPos = 0;
+
+		Cursor<LongType> cursor = histogram.cursor();
+		while (cursor.hasNext()) {
+			cursor.fwd();
+			long binValue = cursor.get().get();
+			double binValueNorm = binValue / (double) maxBinValue;
+			Point p1 = new Point(binPos, histogramHeight - 1 - (int) ((histogramHeight - 1) * binValueNorm));
+			Point p2 = new Point(binPos, histogramHeight - 1);
+			drawLine(histogramImage, p1, p2, new IntType(1));
+			binPos++;
+		}
 	}
 
 	private long getMaxBinValue(Histogram1d<T> histogram) {

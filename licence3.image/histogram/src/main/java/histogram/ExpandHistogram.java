@@ -34,6 +34,10 @@ public class ExpandHistogram<T extends RealType<T>> implements Command {
 		long[] dimensions = new long[image.numDimensions()];
 		image.dimensions(dimensions);
 		result = ImgPlus.wrap(ArrayImgs.unsignedBytes(dimensions));
+		for (int c = 0; c < dimensions.length; c++) {
+			result.setChannelMaximum(c, 255);
+			result.setChannelMinimum(c, 0);
+		}
 		cursorImg.reset();
 		Cursor<UnsignedByteType> cursorResult = result.cursor();
 		while (cursorResult.hasNext()) {
@@ -52,7 +56,7 @@ public class ExpandHistogram<T extends RealType<T>> implements Command {
 		double intensity = imagePixel.getRealDouble();
 		double range = maxIntensity - minIntensity;
 		double targetRange = maxLimitIntensity - minLimitIntensity;
-		double newIntensity = 0d; // Changez cette ligne par le calcul de l'expansion.
+		double newIntensity = ((intensity - minIntensity) * targetRange / range) + minLimitIntensity;
 		return newIntensity;
 	}
 

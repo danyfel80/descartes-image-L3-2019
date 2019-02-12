@@ -56,7 +56,7 @@ public class EqualizeHistogram<T extends RealType<T>> implements Command {
 	}
 
 	private void equalizeHistogram(T pixel, long numPixels, double maxValue, Histogram1d<T> accumulatedHistogram) {
-		double newValue = 0d; // Changez par le calcul de l'egalisation
+		double newValue = (accumulatedHistogram.frequency(pixel) * maxValue / (double) numPixels);
 		pixel.setReal(newValue);
 	}
 
