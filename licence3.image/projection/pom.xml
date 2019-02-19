@@ -1,7 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
@@ -10,12 +9,11 @@
 	</parent>
 
 	<groupId>fr.parisdescartes</groupId>
-	<artifactId>licence3.image</artifactId>
+	<artifactId>projection</artifactId>
 	<version>0.0.1</version>
-	<packaging>pom</packaging>
 
-	<name>Workshop of image processing</name>
-	<description>Projects containing the necessary code to solve workshops assignments</description>
+	<name>Projection</name>
+	<description>Projection computation classes</description>
 	<url>https://github.com/[MY-ORG]/[MY-REPO]</url>
 	<inceptionYear>2018</inceptionYear>
 	<organization>
@@ -80,19 +78,21 @@
 		<license.copyrightOwners>N/A</license.copyrightOwners>
 	</properties>
 
-	<modules>
-		<module>launchImageJ</module>
-		<module>drawLines</module>
-		<module>gradient</module>
-		<module>histogram</module>
-		<module>thresholding</module>
-		<module>projection</module>
-	</modules>
-
 	<repositories>
 		<repository>
 			<id>imagej.public</id>
 			<url>http://maven.imagej.net/content/groups/public</url>
 		</repository>
 	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-algorithm-gpl</artifactId>
+		</dependency>
+	</dependencies>
 </project>
