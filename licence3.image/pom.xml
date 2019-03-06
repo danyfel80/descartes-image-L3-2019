@@ -87,6 +87,7 @@
 		<module>histogram</module>
 		<module>thresholding</module>
 		<module>projection</module>
+		<module>convolution</module>
 	</modules>
 
 	<repositories>
