@@ -15,8 +15,8 @@ import net.imglib2.img.ImgView;
 import net.imglib2.type.numeric.RealType;
 import net.imglib2.type.numeric.real.DoubleType;
 
-@Plugin(type = Command.class, menuPath = "Plugins>TD 5>Convolve")
-public class Convolve<T extends RealType<T>> implements Command {
+@Plugin(type = Command.class, name = "Convolution", menuPath = "Plugins>TD 5>Convolution")
+public class Convolution<T extends RealType<T>> implements Command {
 
 	@Parameter
 	OpService ops;
