@@ -44,7 +44,7 @@ public class Gaussian implements Command {
 		RandomAccessibleInterval<DoubleType> result = ops.filter().convolve(image, kernel);
 
 		// Save result as output
-		outImgP = new ImgPlus<DoubleType>(ImgView.wrap(result, null));
+		outImgP = new ImgPlus<DoubleType>(ImgView.wrap(result, null), "Gauss_" + sigma + img.getName());
 	}
 
 }

@@ -29,7 +29,8 @@ public class ThresholdImage<T extends RealType<T>> implements Command {
 		long[] maskDimensions = new long[inputImage.numDimensions()];
 		inputImage.dimensions(imageDimensions);
 		inputImage.dimensions(maskDimensions);
-		maskDimensions[2] = 1;
+		if (inputImage.numDimensions() > 2)
+			maskDimensions[2] = 1;
 		// Creation of the resulting image with the same size as the input image.
 		
 		mask = ImgPlus.wrap(ArrayImgs.unsignedBytes(maskDimensions));
