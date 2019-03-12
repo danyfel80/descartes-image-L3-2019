@@ -22,7 +22,12 @@ public class Convolve<T extends RealType<T>> implements Command {
 	OpService ops;
 
 	@Parameter(label = "Kernel", persist = false)
-	String kernelString = "1 4 7 4 1;4 16 26 16 4;7 26 41 26 7;4 16 26 16 4;1 4 7 4 1";
+	String kernelString = 
+	  "1 4 7 4 1;"
+	+ "4 16 26 16 4;"
+	+ "7 26 41 26 7;"
+	+ "4 16 26 16 4;"
+	+ "1 4 7 4 1";
 
 	@Parameter
 	ImgPlus<T> img;
@@ -35,7 +40,8 @@ public class Convolve<T extends RealType<T>> implements Command {
 		// 1. Create Kernel
 		// Split kernel string values and convert them to double values
 		double[][] kValues = Arrays.stream(kernelString.split(";"))
-				.map(s -> Arrays.stream(s.split(" +")).mapToDouble(Double::parseDouble).toArray())
+				.map(s -> 
+					Arrays.stream(s.split(" +")).mapToDouble(Double::parseDouble).toArray())
 				.toArray(double[][]::new);
 		// Normalize values
 		double sum = Arrays.stream(kValues).mapToDouble(l -> Arrays.stream(l).sum()).sum();
@@ -53,7 +59,7 @@ public class Convolve<T extends RealType<T>> implements Command {
 				.float64((IterableInterval<DoubleType>) ops.filter().convolve(img, kernel));
 
 		// 3. Save result as output
-		outImgP = new ImgPlus<DoubleType>(ImgView.wrap(result, null));
+		outImgP = new ImgPlus<DoubleType>(ImgView.wrap(result, null), "Conv_" + img.getName());
 	}
 
 }
