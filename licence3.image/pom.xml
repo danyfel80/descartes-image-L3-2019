@@ -88,6 +88,7 @@
 		<module>thresholding</module>
 		<module>projection</module>
 		<module>convolution</module>
+		<module>differencegaussian</module>
 	</modules>
 
 	<repositories>
