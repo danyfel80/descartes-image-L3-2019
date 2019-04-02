@@ -89,6 +89,7 @@
 		<module>projection</module>
 		<module>convolution</module>
 		<module>differencegaussian</module>
+		<module>morphology</module>
 	</modules>
 
 	<repositories>
