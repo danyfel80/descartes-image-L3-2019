@@ -11,6 +11,9 @@ Comme reference, la documentation du code d'ImageJ et d'ImgLib2 sont disponibles
 
 En addition, les tutoriaux officiels d'ImageJ sont disponibles sur le repository GitHub [https://github.com/imagej/tutorials](https://github.com/imagej/tutorials)
 
+Base d'images:
+[https://drive.google.com/drive/folders/1KOeqw3RyV_JsFrX2wBwNhkAx2ufPeocr?usp=sharing](https://drive.google.com/drive/folders/1KOeqw3RyV_JsFrX2wBwNhkAx2ufPeocr?usp=sharing)
+
 ## Installation du code
 ### 1 Télécharger le code
 Pour télécharger le code de ce repository il suffit d'utiliser un outil de gestion de code Git (ex. SmartGit ou SourceTree). Ici, L'environnement de développement Eclipse est utilisé pour télécharger le code dans le disque dur.
